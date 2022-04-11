@@ -1,0 +1,36 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "images/fbdown_icon.png",
+      "default_popup": "popup.html",
+      "default_title": "__MSG_extension_hint__"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "css/content.css" ],
+      "js": [ "js/jquery.js", "js/contentScripts/content.js" ],
+      "matches": [ "https://*.facebook.com/*" ],
+      "run_at": "document_idle"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://s3.amazonaws.com https://ssl.google-analytics.com https://www.google-analytics.com https://www.gstatic.com https://ajax.googleapis.com https://cdnjs.cloudflare.com https://connect.facebook.net https://dw4sx0xk0hu8c.cloudfront.net; object-src 'self'",
+   "default_locale": "en",
+   "description": "Best Video Downloader Extension. Downloads most popular media types from ANY website.",
+   "icons": {
+      "128": "images/icon_128.png",
+      "16": "images/icon_16.png",
+      "24": "images/icon_24.png",
+      "32": "images/icon_32.png",
+      "48": "images/icon_48.png",
+      "64": "images/icon_64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuyPRdUVkV3ELxQTRiNOZ5cAk1RWmw56p8OVf49O1vPP2wiEeSA+V7BW/lzJM20YE5JDmRIpMm//Iu2/qUHVJa73P5WBtI8YGc2yHuiK/wC6p9tKrKrn1UtS2RxQEz0X6WMswCqIrl6rsNJ8JKk+gp7FJwr7LTVKXSOueinmZ0AXoKo5aEjJq/9rkku/7x0aBwq777iK0kkg89CzLSkIfmm5q+Dx0NwgtbyCX2m2YqoeD5IrAAHuPMEoaqoqK5ZyT7P883eUD//ZogKut2SiKhAoIezanwYaOTTCu8595YbKfb+ialxf6kGwyBeirCghYLegF2Q3R0w9zVYqExnXMwQIDAQAB",
+   "manifest_version": 2,
+   "name": "Video Downloader PLUS",
+   "permissions": [ "tabs", "\u003Call_urls>", "webRequest", "http://*/*", "https://*/*", "unlimitedStorage", "management", "downloads", "webRequestBlocking", "webNavigation", "storage" ],
+   "short_name": "Video Downloader PLUS",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "6.1.4",
+   "web_accessible_resources": [ "*" ]
+}

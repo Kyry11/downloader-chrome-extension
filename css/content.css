@@ -1,0 +1,47 @@
+.ext_fb_dl_btn {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    min-width:93px;
+    min-height:32px;
+    box-sizing:border-box;
+    position:absolute!important;
+    top:10px!important;
+    right:30px!important;
+    z-index:99;
+    color:#fff;
+    background-color:#1877F2;
+    justify-content:center;
+    margin:0;
+    padding-bottom:0;
+    padding-top:0;
+    -webkit-tap-highlight-color:transparent;
+    overflow-y:hidden;
+    overflow-x:hidden;
+    cursor:pointer;
+    -webkit-user-select:none;
+    border-radius:6px;
+    border:0;
+    outline:0;
+    text-align:center;
+    text-decoration:none;
+    font-weight:600;
+    font-size:14px
+}
+
+.ext_fb_dl_btn.ext-margin10 {
+    margin:10px
+}
+
+.ext_fb_dl_btn.dl_disabled {
+    cursor:not-allowed
+}
+
+.ext_fb_dl_btn:hover {
+    background-color:#1669d4
+}
+
+.ext_fb_dl_btn.ext_frame {
+    top:25px!important;
+    right:100px!important
+}

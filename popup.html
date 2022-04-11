@@ -1,0 +1,132 @@
+<html>
+<head>
+	<!-- build:js popup/script.js -->
+	<script type="text/javascript" src="js/popup/namespace.js"></script>	
+	
+	<script type="text/javascript" src="js/background/Media.js"></script>	
+	<script type="text/javascript" src="js/background/MainButton.js"></script>	
+	<script type="text/javascript" src="js/Prefs.js"></script>				
+	<script type="text/javascript" src="js/Utils.js"></script>
+	<script type="text/javascript" src="js/popup/Popup.js"></script>	
+	<script type="text/javascript" src="js/popup/PopupDownload.js"></script>	
+	<script type="text/javascript" src="js/popup/PopupMediaStream.js"></script>	
+	<script type="text/javascript" src="js/popup/PopupTwitch.js"></script>	
+	<script type="text/javascript" src="js/Tooltip.js"></script>	
+	<script type="text/javascript" src="js/locale.js"></script>		
+	
+	<script type="text/javascript" src="js/internals/tools.js"></script>
+	<script type="text/javascript" src="js/popup.js"></script>
+	<!-- endbuild -->
+	
+	<!-- build:css popup/style.css -->
+	<link rel="stylesheet" type="text/css" href="css/popup.css" />
+	<link rel="stylesheet" type="text/css" href="js/_external/tiptip.css" />
+	<!-- endbuild -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+	<div id="alert"></div>
+	<div id="download_block">
+		
+		<div id="FvdSuggestionMessage" hidden="true">
+			<div class="text" msg="popup_rate_message"></div>
+			<img src="/images/star.png" class="rate_star"/>
+			<img src="/images/star.png" class="rate_star"/>
+			<img src="/images/star.png" class="rate_star"/>
+			<img src="/images/star.png" class="rate_star"/>
+			<img src="/images/star.png" class="rate_star"/> 
+			<a class="button"><span class="text" msg="popup_rate_button"></span></a>
+		</div>
+		
+		<div id="multiple_download_block">
+			<div class="title">
+				<h2 id="multiple_download_block_title">Detected Videos:</h2>
+				<div  class="iconDiv">
+					<a id="help_link_help"     class="iconButton"        title="Quick Start Guide" href="http://fdown.net/ext/help.php" target="_blank" ></a>
+					<a id="help_link_clear"    class="iconButtonClear"   title="Clear List"></a>
+				</div>
+				<div id="noYoutubeMessage" hidden="true">
+					<span msg="popup_noyoutube_message1"></span><br>
+					<span msg="popup_noyoutube_message2"></span><br>
+					<span msg="popup_noyoutube_message3"></span>
+				</div>
+			
+				<div id="download_item_container"></div>
+		
+				<div class="download_item" id="download_item_template">
+				  <div class="info">
+					<div class="leftContent">					
+						<div class="download_quality">
+							<div class="media_quality"></div>
+							<div class="media_format"><img/></div>
+						</div>					
+						<a class="download_url"></a>				
+					</div>	
+				
+					<div class="buttonsSmall">
+						<a title="Copy to Clipboard" class="copyLink"></a>					
+					</div>
+
+					<div class="rightContent">								
+						<a class="download_button" href="">
+						  <span class="text">Download</span>
+						  <div class="loading"></div>
+						  <div class="size"></div>
+						</a>
+					</div>
+					<div class="buttonsSmall">
+						<a title="Remove from list" class="removeLink"></a>						
+					</div>
+				  </div>
+				  <div class="line"></div>	
+					
+				</div>
+				<div class="download_error" id="download_error_template">
+				  <div class="info">
+					<div class="leftContent">					
+						<span class="download_title"></span>				
+					</div>	
+				
+					<div class="rightContent">								
+						<a class="download_button" title="Click to read">
+						  <span class="error">Error</span>
+						</a>
+					</div>
+
+					<div class="rightDropDownn" style="display: none">								
+					    <div class="text" msg="popup_media_private"></div>
+					    <div class="text"><span>Source Link:</span><a class="error_link" target="_blank"></a></div>
+					</div>
+
+				  </div>
+				  <div class="line"></div>	
+					
+				</div>
+			</div>
+			
+			<div id="empty_download_block" hidden="true">
+				<h2 id="empty_download_block_title" msg="popup_cant_find_media"></h2>
+			</div>
+			
+			<div id="snifferNotice" hidden="true">
+				<strong><span msg="popup_sniffer_notice"></span></strong><br/>
+			</div>
+			<div id="combineNotice" hidden="true">
+				<span msg="popup_media_combine_message1"></span><br/>
+				<span msg="popup_media_combine_message2"></span><br/>
+				<span msg="popup_media_combine_message3"></span><br/>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div id="help_padding_block"></div>
+	<div id="help_block">	
+		<p style="float: right;margin-top: 0px;color: white;margin-right: 4px;font-weight: bold;">V6.1.3 (REV)</p>
+		<div class="bgLine"></div>
+	
+	</div>
+	
+</body>
+</html>
